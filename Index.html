@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html ng-app="appModule">
+<head>
+    <title>Sunrise Recruitment</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/social-buttons.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <!-- Angular Scripts -->
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-loader.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+
+    <script src="app/app-module.js"></script>
+    <script src="app/app-controller.js"></script>
+    <script src="app/shared/services/nav-tabs-service.js"></script>
+
+
+</head>
+<body ng-controller="app-controller">
+    <div class="container-fluid">
+
+        <!-- XS HEADER START -->
+        <div class="row visible-xs orange-section" style="padding: 5px;">
+            <div class="pull-left">
+                <a href="https://www.facebook.com/pages/Sunrise-Recruitment/297526430450891?success=1" class="btn btn-sm btn-facebook small-social-media-icon"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/SunriseRecruit1" class="btn btn-sm btn-twitter small-social-media-icon"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/5375982?trk=tyah&trkInfo=tarId%3A1417370917753%2Ctas%3Asunrise%20recruitment%2Cidx%3A1-1-1" class="btn btn-sm btn-linkedin small-social-media-icon"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="pull-right">
+                <a href="#/register" class="btn btn-default btn-sm">Register</a>
+                <a href="#/sign-in" class="btn btn-default btn-sm">Sign in</a>
+            </div>
+        </div>
+
+        <div class="row visible-xs white-section" style="padding: 20px;">
+            <div class="col-xs-12" style="text-align:center;">
+                <img style="max-height: 65px;" src="Content/Images/SunriseRecruitmentLogo.png" />
+            </div>
+        </div>
+        <!-- XS HEADER END -->
+
+        <!-- LG HEADER START -->
+
+            <div class="row visible-lg white-section">
+                <div class="container center-block" style="margin-top: 20px; margin-bottom: 20px;">
+                    <div class="col-lg-2">
+                        <img class="img-responsive" style="max-width: 100px; height: auto;" src="Content/Images/SunriseRecruitmentLogo.png" />
+                    </div>
+                    <div class="col-lg-8" style="text-align: center;">
+
+                        <!-- Large Social Media Icons -->
+                        <div class="visible-lg">
+                            <a href="https://www.facebook.com/pages/Sunrise-Recruitment/297526430450891?success=1" class="btn btn-lg btn-facebook"><i class="fa fa-facebook"></i> <br /> Connect with Facebook</a>
+                            <a href="https://twitter.com/SunriseRecruit1" class="btn btn-lg btn-twitter"><i class="fa fa-twitter"></i> <br /> Connect with Twitter</a>
+                            <a href="https://www.linkedin.com/company/5375982?trk=tyah&trkInfo=tarId%3A1417370917753%2Ctas%3Asunrise%20recruitment%2Cidx%3A1-1-1" class="btn btn-lg btn-linkedin"><i class="fa fa-linkedin"></i> <br /> Connect with LinkedIn</a>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2">
+                        <a href="#/register" class="btn btn-default btn-block btn-sm pull-right" style="max-width: 100px;">Register</a>
+                        <a href="#/sign-in" class="btn btn-default btn-block btn-sm pull-right" style="max-width: 100px;">Sign in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background: #EF9934;">
+                <div class="container">
+
+                    <div id="menu" class="navbar" style="margin-bottom: 0; min-height: inherit;">
+                        <div class="navbar-header">
+                            <button class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                Show/Hide Menu <span class="fa fa-align-justify"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav nav-justified">
+                                <li class="" role="presentation" ng-class="{ active: isActive('/home') }">
+                                    <a href="#/home">
+                                        <span class="fa fa-home"></span>
+                                        | Home
+                                    </a>
+                                </li>
+                                <li class="" role="presentation" ng-class="{ active: isActive('/current-jobs') }">
+                                    <a href="#/current-jobs">
+                                        <span class="fa fa-star"></span>
+                                        | Current Jobs
+                                    </a>
+                                </li>
+                                <li class="" role="presentation" ng-class="{ active: isActive('/client-services') }">
+                                    <a href="#/client-services">
+                                        <span class="fa fa-suitcase"></span>
+                                        | Client Services
+                                    </a>
+                                </li>
+                                <li class="" role="presentation" ng-class="{ active: isActive('/candidate-services') }">
+                                    <a href="#/candidate-services">
+                                        <span class="fa fa-user"></span>
+                                        | Candidate Services
+                                    </a>
+                                </li>
+                                <li class="" role="presentation" ng-class="{ active: isActive('/contact-us') }">
+                                    <a href="#/contact-us">
+                                        <span class="fa fa-phone"></span>
+                                        | Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row" style="background: rgb(251,218,181); padding-top: 20px;">
+                <div class="container center-block">
+
+                    <div class="col-lg-9" ng-view=""></div>
+
+                    <div class="col-lg-3">
+                        <div class="panel sunrise-side-panel">
+                            <!--<h4>Search Jobs</h4>-->
+                            <div>
+                                <form>
+                                    <div class="form-group">
+                                        <label class="control-label">Keywords</label>
+                                        <input class="form-control" type="text" placeholder="Keywords" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Salary</label>
+                                        <select class="form-control">
+                                            <option>Desired Salary</option>
+                                            <option>> 15,000</option>
+                                            <option>> 20,000</option>
+                                            <option>> 25,000</option>
+                                            <option>> 30,000</option>
+                                            <option>> 40,000</option>
+                                            <option>> 50,000</option>
+                                            <option>> 60,000</option>
+                                            <option>> 70,000</option>
+                                            <option>> 80,000</option>
+                                            <option>> 90,000</option>
+                                            <option>> 100,000</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btn-block btn-primary">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="panel sunrise-side-panel">
+                            <h4>Latest Jobs</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-info">National Account Manager</li>
+                                <li class="list-group-item">Digital Marketing Manager</li>
+                                <li class="list-group-item list-group-item-info">Business Development Manager</li>
+                                <li class="list-group-item">Sales Manager</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="row" style="background: #EF9934; color: #ffffff;">
+                <div class="container center-block" style="text-align: center; padding-top: 10px;">
+                    <p>
+                        SUNRISERECRUITMENTSERVICES LTD | Copyright &copy; 2014 |
+                        Company number: 09039734 |
+                        Telephone: <span>07415119802</span> |
+                        Email: <a href="mailto:info@sunriserecruitment.com">info@sunriserecruitment.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

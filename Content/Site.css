@@ -1,0 +1,163 @@
+﻿
+hr {
+    border-top: 1px solid rgb(251,218,181); 
+    border-bottom: 0;
+}
+.jumbotron {
+    background: #fff;
+    margin-bottom: 20px;
+    border: 5px solid rgb(51, 122, 183);
+}
+
+.jumbotron h1{
+    margin-top: 0px;
+    color: rgb(51, 122, 183);
+}
+.jumbotron p{
+    margin-bottom: 0px;
+    color: #666666;
+    text-align: justify;
+}
+
+.nav li a {
+    color: #ffffff;
+    border-radius: 0;
+}
+
+.nav li a:hover {
+    background: rgb(251,218,181);
+    color: #666666;
+}
+
+.nav li.active a {
+    background: rgb(51, 122, 183);
+    color: #fff;
+}
+
+.latest-job-panel {
+    background: #fff;
+    
+    /* border: 1px solid rgb(51, 122, 183); */
+    margin: 0 0 10px 0;
+}
+
+.latest-job-panel span{
+    padding: 5px 0 5px 0;
+    display: block;
+    text-align: center;
+    font-size: 10pt;
+    /* color: rgb(51, 122, 183); */
+    color: #666;
+}
+
+.sunrise-side-panel {
+    margin-bottom: 20px; 
+    padding: 20px; 
+    
+    /* border: 1px solid rgb(51, 122, 183); 
+    background: #ccc;*/
+    
+    border: 2px solid #ffffff;
+    background: #EF9934;
+}
+
+    .sunrise-side-panel label {
+        color: #ffffff;
+        font-weight: normal;
+    }
+
+.sunrise-side-panel h4{
+    margin-top: 0;
+}
+
+.sunrise-side-panel h4{
+    color: rgb(51, 122, 183); 
+    color: #ffffff;
+
+    text-align: center;
+}
+
+#butFacebook:hover {
+  color: #ffffff;
+  background-color: #133783;
+  *background-color: #102e6d;
+}
+
+.sunrise-page-heading-panel {
+    margin-bottom: 20px; 
+    border: 2px solid rgb(51, 122, 183);
+    padding: 20px;
+    background: #fff;
+}
+
+    .sunrise-page-heading-panel h1 {
+        margin: 0;
+        color: #666;
+        line-height: 40pt;
+        text-align: justify;
+    }
+    .sunrise-page-heading-panel h2 {
+        margin: 0;
+        color: #666;
+        line-height: 24pt;
+        text-align: justify;
+    }
+    .sunrise-page-heading-panel h3 {
+        margin: 0;
+        color: #666;
+        line-height: 24pt;
+        text-align: justify;
+    }
+
+.sunrise-content-panel {
+    margin-bottom: 20px; 
+    border: 2px solid rgb(51, 122, 183);
+    padding: 20px;
+    background: #fff;
+}
+
+    .sunrise-content-panel h1 {
+        margin: 0;
+        color:rgb(51, 122, 183);
+        line-height: 40pt;
+    }
+    .sunrise-content-panel h2 {
+        margin: 0;
+        color:#666;
+        line-height: 24pt;
+    }
+    .sunrise-content-panel h3 {
+        margin: 0;
+        color:rgb(51, 122, 183);
+        line-height: 24pt;
+    }
+
+
+.sunrise-main-content h4 {
+    margin: 15px 0 0 0;
+}
+
+.sunrise-highlight-text {
+    color:rgb(51, 122, 183);
+
+}
+
+.orange-section {
+    background: #EF9934;
+}
+.white-section{
+    background: #ffffff;
+}
+
+.navbar-header {
+    text-align: center;
+}
+
+.navbar-toggle,
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    padding: 5px;
+    margin: 0;
+    color: #fff;
+    float: none;
+}
