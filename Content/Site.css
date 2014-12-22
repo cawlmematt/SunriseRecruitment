@@ -83,63 +83,95 @@ hr {
   *background-color: #102e6d;
 }
 
-.sunrise-page-heading-panel {
-    margin-bottom: 20px; 
-    border: 2px solid rgb(51, 122, 183);
-    padding: 20px;
-    background: #fff;
+/* Specific panel-sunrise Styles */
+.panel-sunrise {
+  border-color: rgb(51, 122, 183); /* blue */
+  border-width: 2px;
+}
+.panel-sunrise > .panel-heading {
+  color: #fff;
+  background-color: rgb(51, 122, 183); /* blue */
+  border-color: rgb(51, 122, 183); /* blue */
+}
+.panel-sunrise > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: rgb(51, 122, 183); /* blue */
+}
+.panel-sunrise > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333;
+}
+.panel-sunrise > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: rgb(51, 122, 183); /* blue */
 }
 
-    .sunrise-page-heading-panel h1 {
-        margin: 0;
-        color: #666;
-        line-height: 40pt;
-        text-align: justify;
-    }
-    .sunrise-page-heading-panel h2 {
-        margin: 0;
-        color: #666;
-        line-height: 24pt;
-        text-align: justify;
-    }
-    .sunrise-page-heading-panel h3 {
-        margin: 0;
-        color: #666;
-        line-height: 24pt;
-        text-align: justify;
-    }
-
-.sunrise-content-panel {
-    margin-bottom: 20px; 
-    border: 2px solid rgb(51, 122, 183);
-    padding: 20px;
-    background: #fff;
+/* Specific panel-sunrise-2 Styles */
+.panel-sunrise-2 {
+  border-color: #EF9934; /* Deep Orange */
+  border-width: 2px;
+}
+.panel-sunrise-2 > .panel-heading {
+  color: #fff;
+  background-color: #EF9934; /* Deep Orange */
+  border-color: #EF9934; /* Deep Orange */
+}
+.panel-sunrise-2 > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #EF9934; /* Deep Orange */
+}
+.panel-sunrise-2 > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333;
+}
+.panel-sunrise-2 > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #EF9934; /* Deep Orange */
 }
 
-    .sunrise-content-panel h1 {
-        margin: 0;
-        color:rgb(51, 122, 183);
-        line-height: 40pt;
-    }
-    .sunrise-content-panel h2 {
-        margin: 0;
-        color:#666;
-        line-height: 24pt;
-    }
-    .sunrise-content-panel h3 {
-        margin: 0;
-        color:rgb(51, 122, 183);
-        line-height: 24pt;
-    }
 
-
-.sunrise-main-content h4 {
-    margin: 15px 0 0 0;
+.panel-sunrise-2 .btn-primary {
+  color: #fff;
+  background-color: #EF9934; /* Deep Orange */
+  border-color: #de8823; /* Deep Orange Dark Border */
 }
+.panel-sunrise-2 .btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active {
+  color: #fff;
+  background-color: #d0801c;
+  border-color: #de8823;
+}
+
+/* Generic panel-sunrise Styles */
+.panel-sunrise label
+,.panel-sunrise-2 label {
+    font-weight: normal; margin-bottom: 0;
+}
+
+.panel-sunrise h4
+,.panel-sunrise-2 h4 {
+    margin-bottom: 0;
+}
+
+.panel-sunrise p
+,.panel-sunrise-2 p {
+    margin-bottom: 20px;
+}
+
+.panel-sunrise .first-element
+,.panel-sunrise-2 .first-element {
+    padding-top: 0; 
+    margin-top: 0;
+}
+
+.panel-sunrise .last-element
+,.panel-sunrise-2 .last-element {
+    padding-bottom: 0; 
+    margin-bottom: 0;
+}
+
 
 .sunrise-highlight-text {
     color:rgb(51, 122, 183);
-
 }
 
 .orange-section {
@@ -161,3 +193,5 @@ hr {
     color: #fff;
     float: none;
 }
+
+
