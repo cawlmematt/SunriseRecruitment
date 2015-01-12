@@ -2,7 +2,7 @@
 (function () {
 
     // Create the module with a name and with no dependencies
-    var app = angular.module("appModule", ["ngRoute", 'ui.bootstrap', "ngAnimate"]);
+    var app = angular.module("appModule", ["ngRoute", 'ui.bootstrap', "ngAnimate", 'ngCookies']);
 
     app.config(function ($routeProvider) {
         $routeProvider
@@ -25,7 +25,8 @@
                 templateUrl: "app/shared/register/register.html"
             })
             .when("/sign-in", {
-                templateUrl: "app/shared/login/login.html"
+                templateUrl: "app/shared/login/login.html",
+                controller: "loginController"
             })
             .otherwise({ redirectTo: "/home" });
     });

@@ -132,10 +132,10 @@ hr {
   border-color: #de8823; /* Deep Orange Dark Border */
 }
 .panel-sunrise-2 .btn-primary:hover,
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary:active,
-.btn-primary.active {
+.panel-sunrise-2 .btn-primary:focus,
+.panel-sunrise-2 .btn-primary.focus,
+.panel-sunrise-2 .btn-primary:active,
+.panel-sunrise-2 .btn-primary.active {
   color: #fff;
   background-color: #d0801c;
   border-color: #de8823;

@@ -12,17 +12,29 @@
                         <label class="control-label">Email Address:</label>
                         <div style="margin-bottom: 15px" class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Email Address">
+                            <input id="login-username" 
+                                   type="text" 
+                                   class="form-control" 
+                                   name="username" 
+                                   data-ng-model="loginForm.username"
+                                   placeholder="Email Address">
                         </div>
                         <label class="control-label" >Password:</label>
                         <div style="margin-bottom: 0;" class="input-group">
                             <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
-                            <input id="login-password" type="password" class="form-control" name="password" placeholder="Password">
+                            <input id="login-password"
+                                   type="password"
+                                   class="form-control"
+                                   name="password"
+                                   data-ng-model="loginForm.password"
+                                   placeholder="Password">
                         </div>
                     </form>
                 </div>
                 <div class="panel-footer">
-                    <a id="btn-login" href="#" class="btn btn-primary btn-block">Sign in</a>
+                    <button id="btn-login" 
+                            class="btn btn-primary btn-block" 
+                            data-ng-click="login(loginForm)">Sign in</button>
                 </div>
             </div>
         </div>
@@ -39,45 +51,83 @@
 
                         <label class="control-label" >Forename:</label>
                         <div style="margin-bottom: 15px" class="form-group">
-                            <input id="txtForename" type="text" class="form-control" name="txtForename" value="" placeholder="Forename">
+                            <input id="txtForename" 
+                                   type="text" 
+                                   class="form-control" 
+                                   name="txtForename" 
+                                   data-ng-model="registrationForm.forename"
+                                   placeholder="Forename">
                         </div>
 
                         <label class="control-label" >Surname:</label>
                         <div style="margin-bottom: 15px" class="form-group">
-                            <input id="txtSurname" type="text" class="form-control" name="txtSurname" value="" placeholder="Surname">
+                            <input id="txtSurname"
+                                   type="text"
+                                   class="form-control"
+                                   name="txtSurname"
+                                   data-ng-model="registrationForm.surname" 
+                                   placeholder="Surname">
                         </div>
 
                         <label class="control-label" >Home Phone Number:</label>
                         <div style="margin-bottom: 15px" class="form-group">
-                            <input id="txtHomePhoneNumber" type="text" class="form-control" name="txtHomePhoneNumber" value="" placeholder="Home Phone Number">
+                            <input id="txtHomePhoneNumber"
+                                   type="text"
+                                   class="form-control"
+                                   name="txtHomePhoneNumber"
+                                   data-ng-model="registrationForm.homePhoneNumber" 
+                                   placeholder="Home Phone Number">
                         </div>
 
                         <label class="control-label" >Mobile Phone Number:</label>
                         <div style="margin-bottom: 15px" class="form-group">
-                            <input id="txtMobilePhoneNumber" type="text" class="form-control" name="txtMobilePhoneNumber" value="" placeholder="Mobile Phone Number">
+                            <input id="txtMobilePhoneNumber"
+                                   type="text"
+                                   class="form-control"
+                                   name="txtMobilePhoneNumber"
+                                   data-ng-model="registrationForm.mobilePhoneNumber"
+                                   placeholder="Mobile Phone Number">
                         </div>
 
                         <label class="control-label" >Email Address:</label>
                         <div style="margin-bottom: 15px" class="input-group">
                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input id="txtEmailAddress" type="password" class="form-control" name="txtEmailAddress" placeholder="Email Address">
+                            <input id="txtEmailAddress"
+                                   type="text"
+                                   class="form-control"
+                                   name="txtEmailAddress"
+                                   data-ng-model="registrationForm.emailAddress"
+                                   placeholder="Email Address">
                         </div>
 
                         <label class="control-label" >Password:</label>
                         <div style="margin-bottom: 15px" class="input-group">
                             <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
-                            <input id="txtPassword" type="password" class="form-control" name="txtPassword" value="" placeholder="Password">
+                            <input id="txtPassword"
+                                   type="password"
+                                   class="form-control"
+                                   name="txtPassword" 
+                                   data-ng-model="registrationForm.password" 
+                                   placeholder="Password">
                         </div>
 
                         <label class="control-label" >Confirm Password:</label>
                         <div style="margin-bottom: 0" class="input-group">
                             <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
-                            <input id="txtConfirmPassword" type="password" class="form-control" name="txtConfirmPassword" value="" placeholder="Confirm Password">
+                            <input id="txtConfirmPassword"
+                                   type="password"
+                                   class="form-control"
+                                   name="txtConfirmPassword"
+                                   data-ng-model="registrationForm.confirmPassword"
+                                   placeholder="Confirm Password">
                         </div>
                     </form>
                 </div>
                 <div class="panel-footer">
-                    <a href="#" class="btn btn-primary btn-block">Register</a>
+                    <button class="btn btn-primary btn-block"
+                            data-ng-click="register(registrationForm)">
+                        Register
+                    </button>
                 </div>
             </div>
         </div>

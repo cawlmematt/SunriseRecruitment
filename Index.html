@@ -11,6 +11,7 @@
 
     <script src="Scripts/jquery-2.1.1.js"></script>
     <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/underscore.js"></script>
 
     <!-- Angular Scripts -->
     <script src="Scripts/angular.js"></script>
@@ -18,14 +19,22 @@
     <script src="Scripts/angular-resource.js"></script>
     <script src="Scripts/angular-animate.min.js"></script>
     <script src="Scripts/angular-loader.min.js"></script>
+    <script src="Scripts/angular-cookies.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
 
     <script src="app/app-module.js"></script>
     <script src="app/app-controller.js"></script>
-    <script src="app/shared/services/nav-tabs-service.js"></script>
+    <script src="app/public/2-current-jobs/jobs-controller.js"></script>
+    
+    <script src="app/shared/filters/cut-filter.js"></script>
 
+    <script src="app/shared/login/services/logout-service.js"></script>
+    <script src="app/shared/login/services/login-service.js"></script>
+    <script src="app/shared/login/login-controller.js"></script>
 
+    <script src="app/shared/services/job-service.js"></script>
+    <script src="app/shared/services/registration-service.js"></script>
 </head>
 <body ng-controller="app-controller">
     <div class="container-fluid">
@@ -67,9 +76,13 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-2" data-ng-if="(!sessionData.username)">
                         <a href="#/sign-in" class="btn btn-default btn-block btn-sm pull-right" style="max-width: 100px;">Register</a>
                         <a href="#/sign-in" class="btn btn-default btn-block btn-sm pull-right" style="max-width: 100px;">Sign in</a>
+                    </div>
+                    <div class="col-lg-2" data-ng-if="(!!sessionData.username)">
+                        <button class="btn btn-default btn-block btn-sm pull-right" data-ng-click="logout()" style="max-width: 100px;">Sign Out</button>
+                        <a href="#/sign-in" class="btn btn-default btn-block btn-sm pull-right" style="max-width: 100px;">View Profile</a>
                     </div>
                 </div>
             </div>

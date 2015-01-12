@@ -1,1 +1,35 @@
-﻿
+﻿<div class="sunrise-main-content" ng-controller="current-jobs-controller">
+    <div class="row">
+        <div class="col-lg-6" data-ng-repeat="job in jobs">
+            <div class="panel panel-sunrise">
+                <div class="panel-heading">
+                    {{ job.jobTitle }}
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <td>
+                                Location
+                            </td>
+                            <td>
+                                {{ job.location }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Salary
+                            </td>
+                            <td>
+                                {{ job.salary | currency:"£":0 }}
+                            </td>
+                        </tr>
+                    </table>
+                    {{ job.jobDescription | cut:false:100: ' ...'}}
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-block btn-primary">More Information</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
