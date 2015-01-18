@@ -25,16 +25,18 @@
 
     <script src="app/app-module.js"></script>
     <script src="app/app-controller.js"></script>
-    <script src="app/public/2-current-jobs/jobs-controller.js"></script>
     
     <script src="app/shared/filters/cut-filter.js"></script>
 
-    <script src="app/shared/login/services/logout-service.js"></script>
-    <script src="app/shared/login/services/login-service.js"></script>
-    <script src="app/shared/login/login-controller.js"></script>
+    <script src="app/logged-out/2-current-jobs/jobs-controller.js"></script>
+    <script src="app/logged-out/6-login/services/logout-service.js"></script>
+    <script src="app/logged-out/6-login/services/login-service.js"></script>
+    <script src="app/logged-out/6-login/services/registration-service.js"></script>
+    <script src="app/logged-out/6-login/login-controller.js"></script>
+
+    <script src="app/logged-in/profile/profile-controller.js"></script>
 
     <script src="app/shared/services/job-service.js"></script>
-    <script src="app/shared/services/registration-service.js"></script>
 </head>
 <body ng-controller="app-controller">
     <div class="container-fluid">
@@ -82,7 +84,7 @@
                     </div>
                     <div class="col-lg-2" data-ng-if="(!!sessionData.username)">
                         <button class="btn btn-default btn-block btn-sm pull-right" data-ng-click="logout()" style="max-width: 100px;">Sign Out</button>
-                        <a href="#/sign-in" class="btn btn-default btn-block btn-sm pull-right" style="max-width: 100px;">View Profile</a>
+                        <a href="#/profile" class="btn btn-default btn-block btn-sm pull-right" style="max-width: 100px;">View Profile</a>
                     </div>
                 </div>
             </div>
@@ -106,7 +108,7 @@
                                 <li class="" role="presentation" ng-class="{ active: isActive('/current-jobs') }">
                                     <a href="#/current-jobs">
                                         <span class="fa fa-star"></span>
-                                        | Current Jobs
+                                        | Latest Jobs
                                     </a>
                                 </li>
                                 <li class="" role="presentation" ng-class="{ active: isActive('/client-services') }">

@@ -4,10 +4,17 @@
 
         $scope.login = function (formData) {
             loginService.login(formData)
-                .success(function (sessionData){
-                    $scope.setSessionData(sessionData);
-                    $cookieStore.put('sessionData', sessionData);
-                    $location.path("/home");
+                .success(function (sessionData) {
+                    if (sessionData.username) {
+                        $scope.setSessionData(sessionData);
+                        $cookieStore.put('sessionData', sessionData);
+                        $location.path("/profile");
+                    } else {
+                        $scope.isInvalidLoginCredentials = true;
+                    }
+                })
+                .error(function (error){
+                    $scope.isInvalidLoginCredentials = true;
                 });
         }
 

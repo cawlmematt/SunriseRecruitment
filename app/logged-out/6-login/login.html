@@ -1,0 +1,216 @@
+﻿<div class="sunrise-main-content">
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-sunrise">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Sign In</h2>
+                </div>
+                <div class="panel-body">
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                    <form id="frmLogin" name="frmLogin" role="form" novalidate>
+                        <div class="alert alert-danger" data-ng-show="isInvalidLoginCredentials">
+                            Invalid Username/Password combination.
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label class="control-label">Email Address:</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                <input id="txtEmailAddress"
+                                       name="txtEmailAddress"
+                                       type="text"
+                                       class="form-control"
+                                       data-ng-model="loginForm.username"
+                                       placeholder="Email Address"
+                                       data-required>
+                            </div>
+                            <div class="text-danger"
+                                 data-ng-show="frmLogin.txtEmailAddress.$error.required &&
+                                               frmLogin.txtEmailAddress.$dirty">
+                                Please enter your Email Address
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 0px;">
+                            <label class="control-label">Password:</label>
+                            <div style="margin-bottom: 0;" class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                                <input id="txtPassword"
+                                       name="txtPassword"
+                                       type="password"
+                                       class="form-control"
+                                       data-ng-model="loginForm.password"
+                                       placeholder="Password"
+                                       data-required>
+                            </div>
+                            <div class="text-danger"
+                                 data-ng-show="frmLogin.txtPassword.$error.required &&
+                                               frmLogin.txtPassword.$dirty">
+                                Please enter your Password
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <button id="btn-login"
+                            class="btn btn-primary btn-block"
+                            data-ng-click="login(loginForm)"
+                            data-ng-disabled="frmLogin.$invalid">
+                        Sign in
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-sunrise">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Register</h2>
+                </div>
+                <div class="panel-body">
+
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                    <form id="frmRegister" name="frmRegister" role="form">
+                        <div style="margin-bottom: 15px">
+                            <label class="control-label">Forename:</label>
+                            <div class="form-group" style="margin-bottom:0px">
+                                <input id="txtForename"
+                                       name="txtForename"
+                                       type="text"
+                                       class="form-control"
+                                       data-ng-model="registrationForm.forename"
+                                       placeholder="Forename"
+                                       data-required>
+                            </div>
+                            <div class="text-danger"
+                                 data-ng-show="frmRegister.txtForename.$error.required &&
+                                               frmRegister.txtForename.$dirty">
+                                Please enter your Forename
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 15px">
+                            <label class="control-label">Surname:</label>
+                            <div style="margin-bottom: 0" class="form-group">
+                                <input id="txtSurname"
+                                       type="text"
+                                       class="form-control"
+                                       name="txtSurname"
+                                       data-ng-model="registrationForm.surname"
+                                       placeholder="Surname"
+                                       data-required>
+                            </div>
+                            <div class="text-danger"
+                                 data-ng-show="frmRegister.txtSurname.$error.required &&
+                                               frmRegister.txtSurname.$dirty">
+                                Please enter your Surname
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 15px">
+                            <label class="control-label">Home Phone Number:</label>
+                            <div style="margin-bottom: 0" class="form-group">
+                                <input id="txtHomePhoneNumber"
+                                       type="text"
+                                       class="form-control"
+                                       name="txtHomePhoneNumber"
+                                       data-ng-model="registrationForm.homePhoneNumber"
+                                       placeholder="Home Phone Number"
+                                       data-required>
+                            </div>
+                            <div class="text-danger"
+                                 data-ng-show="frmRegister.txtHomePhoneNumber.$error.required &&
+                                               frmRegister.txtHomePhoneNumber.$dirty">
+                                Please enter your Home Phone Number
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 15px">
+                            <label class="control-label">Mobile Phone Number:</label>
+                            <div style="margin-bottom: 0" class="form-group">
+                                <input id="txtMobilePhoneNumber"
+                                       type="text"
+                                       class="form-control"
+                                       name="txtMobilePhoneNumber"
+                                       data-ng-model="registrationForm.mobilePhoneNumber"
+                                       placeholder="Mobile Phone Number"
+                                       data-required>
+                            </div>
+                            <div class="text-danger"
+                                 data-ng-show="frmRegister.txtMobilePhoneNumber.$error.required &&
+                                               frmRegister.txtMobilePhoneNumber.$dirty">
+                                Please enter your Mobile Phone Number
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 15px">
+                            <label class="control-label">Email Address:</label>
+                            <div style="margin-bottom: 0" class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                <input id="txtEmailAddress"
+                                       type="text"
+                                       class="form-control"
+                                       name="txtEmailAddress"
+                                       data-ng-model="registrationForm.emailAddress"
+                                       placeholder="Email Address"
+                                       data-required>
+                            </div>
+                            <div class="text-danger"
+                                 data-ng-show="frmRegister.txtEmailAddress.$error.required &&
+                                               frmRegister.txtEmailAddress.$dirty">
+                                Please enter your Email Address
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 15px">
+                            <label class="control-label">Password:</label>
+                            <div style="margin-bottom: 0" class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                                <input id="txtPassword"
+                                       type="password"
+                                       class="form-control"
+                                       name="txtPassword"
+                                       data-ng-model="registrationForm.password"
+                                       placeholder="Password"
+                                       data-required>
+                            </div>
+                            <div class="text-danger"
+                                 data-ng-show="frmRegister.txtPassword.$error.required &&
+                                               frmRegister.txtPassword.$dirty">
+                                Please enter a Password
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 0">
+                            <label class="control-label">Confirm Password:</label>
+                            <div style="margin-bottom: 0" class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                                <input id="txtConfirmPassword"
+                                       type="password"
+                                       class="form-control"
+                                       name="txtConfirmPassword"
+                                       data-ng-model="registrationForm.confirmPassword"
+                                       placeholder="Confirm Password"
+                                       data-required>
+                            </div>
+                            <div class="text-danger"
+                                 data-ng-show="frmRegister.txtConfirmPassword.$error.required &&
+                                               frmRegister.txtConfirmPassword.$dirty">
+                                Please confirm the Password
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-primary btn-block"
+                            data-ng-click="register(registrationForm)"
+                            data-ng-disabled="frmRegister.$invalid">
+                        Register
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -7,26 +7,31 @@
     app.config(function ($routeProvider) {
         $routeProvider
             .when("/home", {
-                templateUrl: "app/public/1-home/home.html"
+                templateUrl: "app/logged-out/1-home/home.html"
             })
             .when("/current-jobs", {
-                templateUrl: "app/public/2-current-jobs/jobs.html"
+                templateUrl: "app/logged-out/2-current-jobs/jobs.html"
             })
             .when("/client-services", {
-                templateUrl: "app/public/3-client-info/client-info.html"
+                templateUrl: "app/logged-out/3-client-info/client-info.html"
             })
             .when("/candidate-services", {
-                templateUrl: "app/public/4-candidate-info/candidate-info.html"
+                templateUrl: "app/logged-out/4-candidate-info/candidate-info.html"
             })
             .when("/contact-us", {
-                templateUrl: "app/public/5-contact-us/contact-us.html"
+                templateUrl: "app/logged-out/5-contact-us/contact-us.html"
             })
             .when("/register", {
-                templateUrl: "app/shared/register/register.html"
+                templateUrl: "app/logged-out/6-login/register.html"
             })
             .when("/sign-in", {
-                templateUrl: "app/shared/login/login.html",
+                templateUrl: "app/logged-out/6-login/login.html",
                 controller: "loginController"
+            })
+
+            .when("/profile", {
+                templateUrl: "app/logged-in/profile/profile.html",
+                controller: "profileController"
             })
             .otherwise({ redirectTo: "/home" });
     });
